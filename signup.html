@@ -4,44 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Lexxon</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/signup.css">
 </head>
 <body>
     <div class="container">
         <div class="login-container container">
-            <div class="row">
+            <div class="row justify-content-center align-items-center">
                 <div class="col-md-6 login-details">
                     <form action="" method="post">
                         <div class="title">
-                            <h2>We are <span class="lex">LEXXON</span></h2>
-                            <p>Welcome back, Login to your Account</p>
+                            <p>Create an Account</p>
                         </div>
                         <div class="form-group form-input">
-                            <input type="email" class="form-control" id="email-field" placeholder="Email*" required>
+                            <input type="text" class="form-control" id="First-name-field" placeholder="First name*" required>
+                            <input type="text" class="form-control" id="Last-name-field" placeholder="Last name*" required>
+                            <input type="email" class="form-control" id="Email-field" placeholder="Email*" required>    
                             <input type="password" class="form-control" id="password-field" placeholder="Password*" required>
                         </div>
-                        <div class="form-group form-check checked">
-                            <input class="form-check-input checking" type="checkbox" name="Remember me" id="remember">
-                            <span class="remember">Remember Me</span>
-                            <span class="forgot"> Forgot Password? </span>
-                        </div>
                         <div class="submit-button ">
-                            <button id="btn"> Login </button>
-                        </div>
-                        <div class="sign-up text-center">
-                            <p>Not a memeber ? <a href="signup.html"><span class="sign">Sign Up</span></a></p>
+                            <button type="submit" id="btn"> Submit </button>
                         </div>
                     </form> 
                 </div>
-                <div class="col-md-6 message">
-                    <div class=" w-75 inner-card text-center">
-                        <h2>LEXXON</h2>
-                        <p>The oak fougth the wind and was broken. The willow bent when it must and survived. We are the willow.</p>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
