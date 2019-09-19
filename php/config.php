@@ -1,4 +1,4 @@
-<?php
+<?php 
 $servername = "localhost";
 $username = "username";
 $password = "password";
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 // Create database
 $sql = "CREATE DATABASE IF NOT EXISTS webDB";
 if ($conn->query($sql) === TRUE) {
-    echo "Database created successfully";
+    //echo "Database created successfully";
 } else {
     echo "Error creating database: " . $conn->error;
 }
