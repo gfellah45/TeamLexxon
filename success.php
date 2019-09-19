@@ -1,3 +1,8 @@
+<?php
+    session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +18,14 @@
         <div class="succes">
                 <div class="succesful">
                     <h2>Success!!</h2>
-                    <p>Your account has been logged in</p>
-                    <p id="id"><span>your id is:</span></p>
+                    <a href="php/logout.php">Logout</a>
+                    <p>Welcome <?php  echo $_SESSION["FIRSTNAME"];?>!  Your account has been logged in</p>
                     <p><i class="fas fa-check-circle fa-4x"></i></p>
                 </div>
         </div>
         
     </section>
+    
     
 </body>
 </html>

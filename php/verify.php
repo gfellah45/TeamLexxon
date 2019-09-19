@@ -25,7 +25,12 @@ if (!$conn) {
   $query = "SELECT * FROM Users WHERE email='$email' AND password = '$password'";
   $results = mysqli_query($conn, $query);
   if (mysqli_num_rows($results) == 1) {
-    readfile("../success.html");
+    while($row = mysqli_fetch_assoc($result)) {
+      $_SESSION["FIRSTNAME"] =  $row["firstname"];
+      $_SESSION["LASTNAME"] = $row["lastname"];
+      $_SESSION["EMAIL"] = $row["email"];
+  }
+    readfile("../success.php");
   	 //echo "It exists";
   	}else {
   		readfile("../failure.html");
