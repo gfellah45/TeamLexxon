@@ -1,12 +1,12 @@
-<?php
+<?php session_start();
 
 require 'create_table.php';
 
 $servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "webDB";
- 
+$username = "id10940165_lexxon";
+$password = "weblexxon";
+$dbname = "id10940165_users";
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -31,21 +31,19 @@ if (isset($_POST['lastname']))
 {
 $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
 }
-/*
-$email = mysqli_real_escape_string($conn, $_POST['email']);
-$password = mysqli_real_escape_string($conn, $_POST['password']);
-$firstname = mysqli_real_escape_string($conn, $_POST['firstname']);
-$lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
-*/
 
 // Attempt insert query execution
-$sql = "INSERT INTO Users (firstname, lastname, email, password) VALUES ('".$firstname."', '".$lastname."', '".$email."', '".$passwrd."')";
+$sql = "INSERT INTO `Users` (firstname, lastname, email, password) VALUES ('".$firstname."', '".$lastname."', '".$email."', '".$passwrd."')";
 
 if ($conn->query($sql) === TRUE) {
-	readfile("../success.html");
-    //echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    
+      $_SESSION["FIRSTNAME"] =  $firstname;
+      $_SESSION["LASTNAME"] = $lastname;
+      $_SESSION["EMAIL"] = $email;
+      
+    include 'success.php';
+}else {
+    readfile("../failure.html");
 }
 
 // Close connection
